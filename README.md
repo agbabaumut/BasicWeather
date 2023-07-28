@@ -1,6 +1,7 @@
 # Weather App
+[weatherappp_sr.webm](https://github.com/agbabaumut/BasicWeather/assets/41001341/22b8ec50-0ac7-458c-81b0-daf9f30f7cee)
+
 ## Overview
-[Uploading weatherappp_sr.webm…]()
 
 ## The Weather App is a Kotlin-based Android application that allows users to check weather information for a desired location. It utilizes the OpenWeatherMap API to fetch weather data and displays it in a user-friendly format.
 
