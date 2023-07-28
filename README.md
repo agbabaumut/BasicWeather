@@ -1,5 +1,6 @@
 # Weather App
 ## Overview
+[Uploading weatherappp_sr.webm…]()
 
 ## The Weather App is a Kotlin-based Android application that allows users to check weather information for a desired location. It utilizes the OpenWeatherMap API to fetch weather data and displays it in a user-friendly format.
 
