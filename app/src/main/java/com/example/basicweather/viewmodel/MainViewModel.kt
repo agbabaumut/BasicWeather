@@ -63,6 +63,4 @@ class MainViewModel: ViewModel() {
             inputMethodManager.hideSoftInputFromWindow(currentFocus.windowToken, 0)
         }
     }
-
-
 }

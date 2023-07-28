@@ -5,17 +5,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.fragment.app.commit
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import com.example.basicweather.viewmodel.MainViewModel
 import androidx.lifecycle.Observer
+import com.example.basicweather.R
 import com.example.basicweather.databinding.ActivityMainBinding
+import com.example.basicweather.viewmodel.SettingsViewModel
+import io.reactivex.internal.disposables.DisposableHelper.replace
 
 private const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var viewmodel: MainViewModel
+    private lateinit var settingsViewModel: SettingsViewModel
 
     private lateinit var GET: SharedPreferences
     private lateinit var SET: SharedPreferences.Editor
@@ -59,6 +64,14 @@ class MainActivity : AppCompatActivity() {
             Log.i(TAG, "onCreate: " + cityName)
         }
 
+        binding.settingsButton.setOnClickListener {
+            showSettingsDialog()
+        }
+    }
+
+    private fun showSettingsDialog() {
+        val settingsDialogFragment = SettingsFragment()
+        settingsDialogFragment.show(supportFragmentManager, "SettingsFragment")
     }
 
     private fun getLiveData() {
